@@ -12,6 +12,7 @@ import {
   Wrench,
   XCircle,
 } from 'lucide-react';
+import { readRescueReport } from './missing-report';
 import './styles.css';
 
 type Severity = 'critical' | 'warning' | 'fixed';
@@ -69,6 +70,10 @@ const timeline = [
   'Fixed root causes before adding new features',
   'Prepared deployment notes and handover checklist',
 ];
+
+// Intentional broken-start issue: this missing import simulates AI-generated code
+// that worked in preview notes but fails during production build.
+readRescueReport();
 
 const iconForSeverity = {
   critical: XCircle,
