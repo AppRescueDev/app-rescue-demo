@@ -60,3 +60,7 @@ npm run build
 ## Portfolio Note
 
 This is a self-contained demo. It does not include client code, private business branding, or Schweet Web assets.
+
+## Fiverr Review
+
+The current launch-positioning notes for the Fiverr gig are in [docs/fiverr-review-brief.md](docs/fiverr-review-brief.md).
