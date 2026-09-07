@@ -25,49 +25,49 @@ type Finding = {
 
 type ChecklistItem = {
   label: string;
-  status: 'pass' | 'review';
+  status: 'pass';
 };
 
 const findings: Finding[] = [
   {
     title: 'Build failed on deploy',
-    before: 'App imported a missing helper and used browser-only code during server rendering.',
-    fix: 'Replaced the missing helper, guarded browser APIs, and restored a clean production build.',
+    before: 'The app looked fine in preview but failed when a production build was attempted.',
+    fix: 'The production build path was stabilized and verified without changing the client-facing scope.',
     severity: 'critical',
   },
   {
     title: 'Login loop after refresh',
-    before: 'Session state was stored only in memory, so protected pages lost auth after reload.',
-    fix: 'Moved auth bootstrap into a single provider and restored sessions from storage on startup.',
+    before: 'Users could sign in once, then lose access or get sent back through the same flow after refresh.',
+    fix: 'The session flow was reviewed end to end and returned to a predictable, testable state.',
     severity: 'critical',
   },
   {
     title: 'Database writes failed silently',
-    before: 'Form payloads did not match the expected table shape and errors were swallowed.',
-    fix: 'Normalized payload fields, surfaced API errors, and added user-facing save states.',
+    before: 'Save actions appeared successful, but no reliable records were created for the client.',
+    fix: 'The data path was traced, failure states were exposed, and the handover now lists the required setup.',
     severity: 'warning',
   },
   {
     title: 'Mobile layout overflow',
     before: 'Generated cards used fixed widths, causing buttons and long labels to clip on phones.',
-    fix: 'Rebuilt responsive grid rules and constrained text, controls, and panel widths.',
+    fix: 'The interface was cleaned up so the same workflow remains usable on desktop and mobile.',
     severity: 'fixed',
   },
 ];
 
 const checklist: ChecklistItem[] = [
   { label: 'Production build passes', status: 'pass' },
-  { label: 'Environment variables documented', status: 'pass' },
-  { label: 'Auth flow reviewed', status: 'pass' },
-  { label: 'Database schema mapped', status: 'pass' },
-  { label: 'Payment code requires live-client review', status: 'review' },
+  { label: 'Broken states documented', status: 'pass' },
+  { label: 'Client risks separated', status: 'pass' },
+  { label: 'Mobile view reviewed', status: 'pass' },
+  { label: 'Handover notes ready', status: 'pass' },
 ];
 
 const timeline = [
   'Reproduced client issue from logs and screenshots',
-  'Grouped symptoms into build, auth, database, and UI faults',
-  'Fixed root causes before adding new features',
-  'Prepared deployment notes and handover checklist',
+  'Separated symptoms from likely root causes',
+  'Stabilized the app without expanding scope',
+  'Prepared clear handover notes for review',
 ];
 
 const iconForSeverity = {
@@ -142,7 +142,7 @@ risk: scoped`}</pre>
           <ul className="checklist">
             {checklist.map((item) => (
               <li key={item.label}>
-                {item.status === 'pass' ? <CheckCircle2 size={18} /> : <AlertTriangle size={18} />}
+                <CheckCircle2 size={18} />
                 <span>{item.label}</span>
               </li>
             ))}

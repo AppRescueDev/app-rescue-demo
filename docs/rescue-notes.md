@@ -12,8 +12,8 @@ This is a portfolio demonstration for an AI/vibe-coded app rescue service. It is
 ## Stabilization Approach
 
 1. Reproduce the failure from logs and screenshots.
-2. Separate symptoms into build, auth, API/database, and UI categories.
-3. Fix root causes before adding or changing features.
+2. Separate visible symptoms from likely root causes.
+3. Stabilize the app before changing or adding features.
 4. Confirm production build.
 5. Write handover notes with remaining risks.
 
@@ -21,5 +21,5 @@ This is a portfolio demonstration for an AI/vibe-coded app rescue service. It is
 
 - React component cleanup.
 - Deployment-focused debugging.
-- Environment variable and API failure handling.
+- Environment and API readiness checks.
 - Practical project scoping for small rescue jobs.

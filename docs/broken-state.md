@@ -4,11 +4,11 @@ This document describes the fictional broken starting point for the demo. Use it
 
 ## Simulated Broken Issues
 
-- Missing helper imports caused production builds to fail.
-- Auth state was scattered across components and reset on refresh.
-- Database writes swallowed errors, making failed saves look successful.
-- Environment variables were not listed anywhere.
-- Generated CSS used fixed widths that broke mobile layouts.
+- Production builds failed even though previews appeared to work.
+- Users could hit a login loop or lose session state after refresh.
+- Save actions appeared successful but did not reliably create records.
+- Required environment setup was unclear.
+- Mobile layouts clipped important controls and longer labels.
 
 ## Why The Main Branch Is Fixed
 
