@@ -4,7 +4,7 @@ This note is for review before the AppRescueDev Fiverr gig goes live.
 
 ## Gig Direction
 
-Lead with AI app rescue, JavaScript/React frontend debugging, integrations, deployment fixes, and clear handover notes.
+Lead with AI app rescue, JavaScript/frontend debugging, integrations, deployment fixes, and clear handover notes.
 
 Avoid presenting backend, payment, or ecommerce work as a primary promise until there is a separate proof demo.
 
@@ -17,21 +17,24 @@ Avoid presenting backend, payment, or ecommerce work as a primary promise until 
 
 ## Fiverr Skills To Use
 
-- JavaScript developer
+- JavaScript
 - HTML and CSS
 - Bootstrap
-- Django developer
-- Laravel developer
-- PHP developer
+- Django
+- Laravel
+- PHP
 
-Use a softer React label if Fiverr allows it, such as React developer or React bug fixing. If Fiverr only offers React expert, remove it for now.
+React is shown by the public demo, so it can stay in the gig copy as a demonstrated demo stack. Do not use "React expert". If Fiverr only offers "React expert" as a profile skill label, remove that profile skill for launch.
 
 ## Fiverr Skills To Avoid For Launch
 
 - React expert
 - Laravel expert
+- PHP expert
+- Django expert
 - Payment integration
 - Ecommerce development
+- Any other "expert" claim
 
 ## Package Pricing
 
@@ -42,6 +45,6 @@ Use a softer React label if Fiverr allows it, such as React developer or React b
 ## Wording Guardrails
 
 - Say "I can inspect and stabilize" rather than "I am an expert".
-- Say "PHP/Laravel issues when the scope is clear" rather than leading with Laravel.
+- Say "PHP/Laravel/Django issues when the scope is clear" rather than leading with backend claims.
 - Do not promise payment or ecommerce implementation in the launch gig.
 - Keep the offer focused on launch blockers: broken builds, deploy errors, auth/session bugs, API/database connection issues, responsive layout problems, and handover notes.
